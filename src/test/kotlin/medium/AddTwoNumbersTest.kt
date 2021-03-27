@@ -1,43 +1,33 @@
 package medium
 
-import org.junit.Test
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.Arguments
+import org.junit.jupiter.params.provider.Arguments.arguments
+import org.junit.jupiter.params.provider.MethodSource
+import java.util.stream.Stream
 import kotlin.math.pow
 import kotlin.test.assertEquals
 
 internal class AddTwoNumbersTest {
 
-    private val addTwoNumbers = AddTwoNumbers()
+    companion object {
 
-    @Test
-    fun `example 1`() {
-        val l1 = intArrayOf(2, 4, 3).toListNode()
-        val l2 = intArrayOf(5, 6, 4).toListNode()
-        val expected = 807
-        val actual = addTwoNumbers.addTwoNumbers(l1, l2).toInt()
+        @JvmStatic
+        fun sampleData(): Stream<Arguments> =
+            Stream.of(
+                arguments(intArrayOf(2, 4, 3), intArrayOf(5, 6, 4), 807),
+                arguments(intArrayOf(0), intArrayOf(0), 0),
+                arguments(intArrayOf(9, 9, 9, 9, 9, 9, 9), intArrayOf(9, 9, 9, 9), 10009998)
+            )
+    }
+
+    @ParameterizedTest
+    @MethodSource("sampleData")
+    fun `example 1`(l1: IntArray, l2: IntArray, expected: Int) {
+        val actual = AddTwoNumbers().addTwoNumbers(l1.toListNode(), l2.toListNode()).toInt()
 
         assertEquals(expected, actual)
     }
-
-    @Test
-    fun `example 2`() {
-        val l1 = intArrayOf(0).toListNode()
-        val l2 = intArrayOf(0).toListNode()
-        val expected = 0
-        val actual = addTwoNumbers.addTwoNumbers(l1, l2).toInt()
-
-        assertEquals(expected, actual)
-    }
-
-    @Test
-    fun `example 3`() {
-        val l1 = intArrayOf(9, 9, 9, 9, 9, 9, 9).toListNode()
-        val l2 = intArrayOf(9, 9, 9, 9).toListNode()
-        val expected = 10009998
-        val actual = addTwoNumbers.addTwoNumbers(l1, l2).toInt()
-
-        assertEquals(expected, actual)
-    }
-
 
     private fun IntArray.toListNode(): ListNode {
         if (this.isEmpty()) return ListNode(0)

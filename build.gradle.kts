@@ -14,10 +14,16 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test-junit"))
+    testImplementation(platform("org.junit:junit-bom:5.7.1"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
+
 }
 
 tasks.test {
-    useJUnit()
+    useJUnitPlatform()
+    testLogging {
+        events("passed", "skipped", "failed")
+    }
 }
 
 tasks.withType<KotlinCompile>() {
