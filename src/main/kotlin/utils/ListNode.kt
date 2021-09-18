@@ -28,6 +28,19 @@ fun IntArray.toListNode(): ListNode {
 }
 
 fun ListNode.toInt(): Int {
+    val sb = StringBuilder()
+
+    var currentNode: ListNode? = this
+
+    while(currentNode != null) {
+        sb.append(currentNode.`val`)
+        currentNode = currentNode.next
+    }
+
+    return sb.toString().toInt()
+}
+
+fun ListNode.toReversedInt(): Int {
     var result = 0
     var currentIndex = 0
     var currentNode: ListNode? = this

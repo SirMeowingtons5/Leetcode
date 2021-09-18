@@ -5,7 +5,7 @@ import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.Arguments.arguments
 import org.junit.jupiter.params.provider.MethodSource
 import utils.ListNode
-import utils.toInt
+import utils.toReversedInt
 import utils.toListNode
 import java.util.stream.Stream
 import kotlin.test.assertEquals
@@ -39,6 +39,6 @@ internal class MergeKSortedListTest {
     @ParameterizedTest
     @MethodSource("sampleData")
     fun `sample data test`(lists: Array<ListNode?>, expected: ListNode?) {
-        assertEquals(expected?.toInt(), MergeKSortedList().mergeKLists(lists)?.toInt())
+        assertEquals(expected?.toReversedInt(), MergeKSortedList().mergeKLists(lists)?.toReversedInt())
     }
 }

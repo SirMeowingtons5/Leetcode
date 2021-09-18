@@ -4,7 +4,7 @@ import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.Arguments.arguments
 import org.junit.jupiter.params.provider.MethodSource
-import utils.toInt
+import utils.toReversedInt
 import utils.toListNode
 import java.util.stream.Stream
 import kotlin.test.assertEquals
@@ -25,7 +25,7 @@ internal class AddTwoNumbersTest {
     @ParameterizedTest
     @MethodSource("sampleData")
     fun `example 1`(l1: IntArray, l2: IntArray, expected: Int) {
-        val actual = AddTwoNumbers().addTwoNumbers(l1.toListNode(), l2.toListNode()).toInt()
+        val actual = AddTwoNumbers().addTwoNumbers(l1.toListNode(), l2.toListNode()).toReversedInt()
 
         assertEquals(expected, actual)
     }
