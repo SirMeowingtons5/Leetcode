@@ -27,6 +27,19 @@ fun IntArray.toListNode(): ListNode {
     return rootNode
 }
 
+fun ListNode.toIntArray(): IntArray {
+    val res = ArrayList<Int>()
+
+    var current: ListNode? = this
+
+    while (current != null) {
+        res.add(current.`val`)
+        current = current.next
+    }
+
+    return res.toIntArray()
+}
+
 fun ListNode.toInt(): Int {
     val sb = StringBuilder()
 
