@@ -10,10 +10,16 @@ import kotlin.math.pow
 class ListNode(var `val`: Int) {
 
     var next: ListNode? = null
+
+    override fun equals(other: Any?): Boolean =
+        other is ListNode
+                && this.`val` == other.`val`
+                && ((this.next == null && other.next == null) || (this.next?.equals(other.next) ?: false))
+
 }
 
-fun IntArray.toListNode(): ListNode {
-    if (this.isEmpty()) return ListNode(0)
+fun IntArray.toListNode(): ListNode? {
+    if (this.isEmpty()) return null
 
     val rootNode = ListNode(this[0])
     var currentNode = rootNode
@@ -27,7 +33,7 @@ fun IntArray.toListNode(): ListNode {
     return rootNode
 }
 
-fun ListNode.toIntArray(): IntArray {
+fun ListNode?.toIntArray(): IntArray {
     val res = ArrayList<Int>()
 
     var current: ListNode? = this
@@ -45,7 +51,7 @@ fun ListNode.toInt(): Int {
 
     var currentNode: ListNode? = this
 
-    while(currentNode != null) {
+    while (currentNode != null) {
         sb.append(currentNode.`val`)
         currentNode = currentNode.next
     }

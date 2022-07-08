@@ -20,23 +20,23 @@ class RemoveNthNodeFromEndOfListTest {
         fun sampleData(): Stream<Arguments> = Stream.of(
             arguments(
                 RemoveNthNodeFromEndOfListTestData(
-                    head = intArrayOf(1, 2, 3, 4, 5).toListNode(),
+                    head = intArrayOf(1, 2, 3, 4, 5).toListNode()!!,
                     n = 2,
-                    expected = intArrayOf(1, 2, 3, 5).toListNode(),
+                    expected = intArrayOf(1, 2, 3, 5).toListNode()!!,
                 ),
             ),
             arguments(
                 RemoveNthNodeFromEndOfListTestData(
-                    head = intArrayOf(1, 2, 3, 4, 5).toListNode(),
+                    head = intArrayOf(1, 2, 3, 4, 5).toListNode()!!,
                     n = 5,
-                    expected = intArrayOf(2, 3, 4, 5).toListNode(),
+                    expected = intArrayOf(2, 3, 4, 5).toListNode()!!,
                 ),
             ),
             arguments(
                 RemoveNthNodeFromEndOfListTestData(
-                    head = intArrayOf(1, 2).toListNode(),
+                    head = intArrayOf(1, 2).toListNode()!!,
                     n = 1,
-                    expected = intArrayOf(1).toListNode(),
+                    expected = intArrayOf(1).toListNode()!!,
                 ),
             ),
         )
@@ -53,7 +53,7 @@ class RemoveNthNodeFromEndOfListTest {
 
     @Test
     fun `removing single node EXPECT null as result`() {
-        val actual = RemoveNthNodeFromEndOfList().removeNthFromEnd(head = intArrayOf(1).toListNode(), n = 1)
+        val actual = RemoveNthNodeFromEndOfList().removeNthFromEnd(head = intArrayOf(1).toListNode()!!, n = 1)
         val expected: ListNode? = null
 
         assertEquals(expected, actual)

@@ -25,7 +25,7 @@ internal class AddTwoNumbersTest {
     @ParameterizedTest
     @MethodSource("sampleData")
     fun `example 1`(l1: IntArray, l2: IntArray, expected: Int) {
-        val actual = AddTwoNumbers().addTwoNumbers(l1.toListNode(), l2.toListNode()).toReversedInt()
+        val actual = AddTwoNumbers().addTwoNumbers(l1.toListNode()!!, l2.toListNode()!!).toReversedInt()
 
         assertEquals(expected, actual)
     }
