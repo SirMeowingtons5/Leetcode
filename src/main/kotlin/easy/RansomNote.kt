@@ -1,9 +1,16 @@
 package easy
 
-/**
- * https://leetcode.com/problems/ransom-note/
- */
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 383,
+    title = "Ransom Note",
+    link = "https://leetcode.com/problems/ransom-note/",
+    difficulty = ProblemDifficulty.EASY,
+)
 class RansomNote {
     fun canConstruct(ransomNote: String, magazine: String): Boolean {
         val ransomChars = ransomNote.groupBy { it }

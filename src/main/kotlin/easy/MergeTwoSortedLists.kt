@@ -1,11 +1,17 @@
 package easy
 
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 import utils.ListNode
 
-/**
- * 21. Merge Two Sorted Lists
- * https://leetcode.com/problems/merge-two-sorted-lists/
- */
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 21,
+    title = "Merge Two Sorted Lists",
+    link = "https://leetcode.com/problems/merge-two-sorted-lists/",
+    difficulty = ProblemDifficulty.EASY,
+)
 class MergeTwoSortedLists {
 
     fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {

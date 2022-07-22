@@ -1,10 +1,16 @@
 package easy
 
-/**
- * 344. Reverse String
- * https://leetcode.com/problems/reverse-string/
- */
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 344,
+    title = "Reverse String",
+    link = "https://leetcode.com/problems/reverse-string/",
+    difficulty = ProblemDifficulty.EASY,
+)
 class ReverseString {
 
     fun reverseString(s: CharArray) {

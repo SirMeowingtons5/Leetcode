@@ -1,11 +1,17 @@
 package easy
 
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 import utils.ListNode
 
-/**
- * https://leetcode.com/problems/reverse-linked-list/
- */
-
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 206,
+    title = "Reverse Linked List",
+    link = "https://leetcode.com/problems/reverse-linked-list/",
+    difficulty = ProblemDifficulty.EASY,
+)
 class ReversedLinkedList {
 
     fun reverseList(head: ListNode?): ListNode? {

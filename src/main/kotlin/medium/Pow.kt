@@ -1,11 +1,16 @@
 package medium
 
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 
-/**
- * 50. Pow(x, n)
- * https://leetcode.com/problems/powx-n/
- */
-
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 50,
+    title = "Pow(x, n)",
+    link = "https://leetcode.com/problems/powx-n/",
+    difficulty = ProblemDifficulty.MEDIUM,
+)
 class Pow {
 
     fun myPow(x: Double, n: Int): Double {

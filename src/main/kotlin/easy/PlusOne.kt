@@ -1,9 +1,16 @@
 package easy
 
-/**
- * https://leetcode.com/problems/plus-one/
- */
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 66,
+    title = "Plus One",
+    link = "https://leetcode.com/problems/plus-one/",
+    difficulty = ProblemDifficulty.EASY,
+)
 class PlusOne {
 
     fun plusOne(digits: IntArray): IntArray {

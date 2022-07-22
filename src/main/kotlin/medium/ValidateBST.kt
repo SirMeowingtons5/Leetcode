@@ -1,13 +1,18 @@
 package medium
 
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 import utils.TreeNode
 import java.util.*
 
-/**
- * 98. Validate Binary Search Tree
- * https://leetcode.com/problems/validate-binary-search-tree/
- */
-
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 98,
+    title = "Validate Binary Search Tree",
+    link = "https://leetcode.com/problems/validate-binary-search-tree/",
+    difficulty = ProblemDifficulty.MEDIUM,
+)
 class ValidateBST {
 
     fun isValidBST(root: TreeNode?): Boolean {

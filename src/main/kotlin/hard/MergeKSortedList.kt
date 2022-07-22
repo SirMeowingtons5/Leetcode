@@ -1,13 +1,19 @@
 package hard
 
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 import utils.ListNode
 import java.util.PriorityQueue
 import kotlin.Comparator
 
-/**
- * https://leetcode.com/problems/merge-k-sorted-lists/
- */
-
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 23,
+    title = "Merge k Sorted Lists",
+    link = "https://leetcode.com/problems/merge-k-sorted-lists/",
+    difficulty = ProblemDifficulty.HARD,
+)
 class MergeKSortedList {
 
     fun mergeKLists(lists: Array<ListNode?>): ListNode? {

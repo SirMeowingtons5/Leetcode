@@ -1,10 +1,16 @@
 package easy
 
-/**
- * 136. Single Number
- * https://leetcode.com/problems/single-number/
- */
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 136,
+    title = "Single Number",
+    link = "https://leetcode.com/problems/single-number/",
+    difficulty = ProblemDifficulty.EASY,
+)
 class SingleNumber {
 
     fun singleNumber(nums: IntArray): Int {

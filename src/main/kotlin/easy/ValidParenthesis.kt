@@ -1,11 +1,20 @@
 package easy
 
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 import java.util.*
 
 /**
  * https://leetcode.com/problems/valid-parentheses
  */
-
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 20,
+    title = "Valid Parentheses",
+    link = "https://leetcode.com/problems/valid-parentheses/",
+    difficulty = ProblemDifficulty.EASY,
+)
 class ValidParenthesis {
 
     fun isValid(s: String): Boolean {

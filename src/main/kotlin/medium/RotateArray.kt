@@ -1,10 +1,16 @@
 package medium
 
-/**
- * 189. Rotate Array
- * https://leetcode.com/problems/rotate-array/
- */
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 189,
+    title = "Rotate Array",
+    link = "https://leetcode.com/problems/rotate-array/",
+    difficulty = ProblemDifficulty.MEDIUM,
+)
 class RotateArray {
 
     fun rotate(nums: IntArray, k: Int) {

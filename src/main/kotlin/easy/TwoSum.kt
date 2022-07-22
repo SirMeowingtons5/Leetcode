@@ -1,11 +1,16 @@
 package easy
 
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 
-/**
- * 1. Two Sum
- * https://leetcode.com/problems/two-sum/
- */
-
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 1,
+    title = "Two Sum",
+    link = "https://leetcode.com/problems/two-sum/",
+    difficulty = ProblemDifficulty.EASY,
+)
 class TwoSum {
 
     fun twoSum(nums: IntArray, target: Int): IntArray {

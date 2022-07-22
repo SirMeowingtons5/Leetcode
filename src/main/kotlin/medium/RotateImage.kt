@@ -1,9 +1,16 @@
 package medium
 
-/**
- * 48. Rotate Image
- * https://leetcode.com/problems/rotate-image/
- */
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
+
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 48,
+    title = "Rotate Image",
+    link = "https://leetcode.com/problems/rotate-image/",
+    difficulty = ProblemDifficulty.MEDIUM,
+)
 class RotateImage {
 
     fun rotate(matrix: Array<IntArray>) {
@@ -16,7 +23,6 @@ class RotateImage {
                 matrix[max-j][i] = matrix[max-i][max-j] //write 3rd to 4th
                 matrix[max-i][max-j] = matrix[j][max-i] //write 2nd to 3rd
                 matrix[j][max-i] = temp //write 1st to 2nd
-
             }
         }
     }

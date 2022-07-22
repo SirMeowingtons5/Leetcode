@@ -1,11 +1,21 @@
 package easy
 
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
+
 /**
- * https://leetcode.com/problems/guess-number-higher-or-lower/
  * Don't forget to remove constructor argument from GuessNumber before submitting
  * It was added purely for testing purposes
  */
 
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 374,
+    title = "Guess Number Higher or Lower",
+    link = "https://leetcode.com/problems/guess-number-higher-or-lower/",
+    difficulty = ProblemDifficulty.EASY,
+)
 class GuessNumber(pick: Int) : GuessGame(pick) {
 
     override fun guessNumber(n: Int): Int {

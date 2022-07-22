@@ -1,9 +1,16 @@
 package easy
 
-/**
- * 14. Longest Common Prefix
- * https://leetcode.com/problems/longest-common-prefix/
- */
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
+
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 14,
+    title = "Longest Common Prefix",
+    link = "https://leetcode.com/problems/longest-common-prefix/",
+    difficulty = ProblemDifficulty.EASY,
+)
 class LongestCommonPrefix {
 
     fun longestCommonPrefix(strs: Array<String>): String {

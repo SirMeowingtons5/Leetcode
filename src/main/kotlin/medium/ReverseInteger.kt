@@ -1,10 +1,16 @@
 package medium
 
-/**
- * 7. Reverse Integer
- * https://leetcode.com/problems/reverse-integer/
- */
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 7,
+    title = "Reverse Integer",
+    link = "https://leetcode.com/problems/reverse-integer/",
+    difficulty = ProblemDifficulty.MEDIUM,
+)
 class ReverseInteger {
 
     fun reverse(x: Int): Int {

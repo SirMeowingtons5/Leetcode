@@ -1,9 +1,16 @@
 package easy
 
-/**
- * https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
- */
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 121,
+    title = "Best Time to Buy and Sell Stock",
+    link = "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+    difficulty = ProblemDifficulty.EASY,
+)
 class BestTimeStock {
 
     fun maxProfit(prices: IntArray): Int {

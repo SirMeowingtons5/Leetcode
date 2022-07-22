@@ -1,11 +1,17 @@
 package medium
 
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 import utils.ListNode
 
-/**
- * https://leetcode.com/problems/add-two-numbers/
- */
-
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 2,
+    title = "Add Two Numbers",
+    link = "https://leetcode.com/problems/add-two-numbers/",
+    difficulty = ProblemDifficulty.MEDIUM,
+)
 class AddTwoNumbers {
     fun addTwoNumbers(l1: ListNode, l2: ListNode): ListNode {
         val resultRootNode = ListNode(Int.MIN_VALUE)

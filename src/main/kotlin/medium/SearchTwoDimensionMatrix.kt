@@ -1,9 +1,16 @@
 package medium
 
-/**
- * https://leetcode.com/problems/search-a-2d-matrix/
- */
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 74,
+    title = "Search a 2D Matrix",
+    link = "https://leetcode.com/problems/search-a-2d-matrix/",
+    difficulty = ProblemDifficulty.MEDIUM,
+)
 class SearchTwoDimensionMatrix {
 
     fun searchMatrix(matrix: Array<IntArray>, target: Int): Boolean {

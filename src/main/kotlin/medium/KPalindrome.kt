@@ -1,10 +1,16 @@
 package medium
 
-/**
- * https://leetcode.com/problems/construct-k-palindrome-strings/
- */
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 
-
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 1400,
+    title = "Construct K Palindrome Strings",
+    link = "https://leetcode.com/problems/construct-k-palindrome-strings/",
+    difficulty = ProblemDifficulty.MEDIUM,
+)
 /**
  * With paired chars you may build any number of palindromes in [1;pairedChars]
  * since any pair may represent 3 numbers of palindromes:

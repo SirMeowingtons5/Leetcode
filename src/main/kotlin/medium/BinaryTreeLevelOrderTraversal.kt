@@ -1,14 +1,19 @@
 package medium
 
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 import utils.TreeNode
 import java.util.LinkedList
 import java.util.Queue
 
-/**
- * 102. Binary Tree Level Order Traversal
- * https://leetcode.com/problems/binary-tree-level-order-traversal/
- */
-
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 102,
+    title = "Binary Tree Level Order Traversal",
+    link = "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+    difficulty = ProblemDifficulty.MEDIUM,
+)
 class BinaryTreeLevelOrderTraversal {
 
     fun levelOrder(root: TreeNode?): List<List<Int>> {

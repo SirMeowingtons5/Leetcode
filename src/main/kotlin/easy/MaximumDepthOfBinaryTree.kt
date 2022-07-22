@@ -1,14 +1,19 @@
 package easy
 
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 import utils.TreeNode
 import java.util.LinkedList
 import java.util.Queue
 
-/**
- * 104. Maximum Depth of Binary Tree
- * https://leetcode.com/problems/maximum-depth-of-binary-tree/
- */
-
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 104,
+    title = "Maximum Depth of Binary Tree",
+    link = "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+    difficulty = ProblemDifficulty.EASY,
+)
 class MaximumDepthOfBinaryTree {
 
     fun maxDepth(root: TreeNode?): Int {

@@ -1,10 +1,16 @@
 package easy
 
-/**
- * 387. First Unique Character in a String
- * https://leetcode.com/problems/first-unique-character-in-a-string/
- */
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 387,
+    title = "First Unique Character in a String",
+    link = "https://leetcode.com/problems/first-unique-character-in-a-string/",
+    difficulty = ProblemDifficulty.EASY,
+)
 class FirstUniqueCharacterInAString {
 
     fun firstUniqChar(s: String): Int {

@@ -1,9 +1,16 @@
 package medium
 
-/**
- * https://leetcode.com/problems/longest-substring-without-repeating-characters/
- */
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 3,
+    title = "Longest Substring Without Repeating Characters",
+    link = "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+    difficulty = ProblemDifficulty.MEDIUM,
+)
 class LongestSubstringWithoutRepeatingChars {
 
     fun lengthOfLongestSubstring(s: String): Int {

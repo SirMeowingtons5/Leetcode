@@ -1,9 +1,16 @@
 package hard
 
-/**
- * https://leetcode.com/problems/median-of-two-sorted-arrays/
- */
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 4,
+    title = "Median of Two Sorted Arrays",
+    link = "https://leetcode.com/problems/median-of-two-sorted-arrays/",
+    difficulty = ProblemDifficulty.HARD,
+)
 class MedianOfTwoSortedArrays {
 
     fun findMedianSortedArrays(n: IntArray, m: IntArray): Double {

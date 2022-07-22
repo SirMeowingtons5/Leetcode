@@ -1,9 +1,16 @@
 package easy
 
-/**
- * 125. Valid Palindrome
- * https://leetcode.com/problems/valid-palindrome/
- */
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
+
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 125,
+    title = "Valid Palindrome",
+    link = "https://leetcode.com/problems/valid-palindrome/",
+    difficulty = ProblemDifficulty.EASY,
+)
 class ValidPalindrome {
 
     fun isPalindrome(s: String): Boolean {

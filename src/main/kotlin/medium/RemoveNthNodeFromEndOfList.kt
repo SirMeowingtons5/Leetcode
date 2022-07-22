@@ -1,11 +1,17 @@
 package medium
 
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 import utils.ListNode
 
-/**
- * 19. Remove Nth Node From End of List
- * https://leetcode.com/problems/remove-nth-node-from-end-of-list/
- */
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 19,
+    title = "Remove Nth Node From End of List",
+    link = "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+    difficulty = ProblemDifficulty.MEDIUM,
+)
 class RemoveNthNodeFromEndOfList {
 
     fun removeNthFromEnd(head: ListNode, n: Int): ListNode? {

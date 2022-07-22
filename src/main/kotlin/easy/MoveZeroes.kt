@@ -1,10 +1,16 @@
 package easy
 
-/**
- * 283. Move Zeroes
- * https://leetcode.com/problems/move-zeroes/
- */
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 283,
+    title = "Move Zeroes",
+    link = "https://leetcode.com/problems/move-zeroes/",
+    difficulty = ProblemDifficulty.EASY,
+)
 class MoveZeroes {
 
     fun moveZeroes(nums: IntArray) {

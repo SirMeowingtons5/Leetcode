@@ -1,9 +1,16 @@
 package easy
 
-/**
- * 242. Valid Anagram
- * https://leetcode.com/problems/valid-anagram/
- */
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
+
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 242,
+    title = "Valid Anagram",
+    link = "https://leetcode.com/problems/valid-anagram/",
+    difficulty = ProblemDifficulty.EASY,
+)
 class ValidAnagram {
 
     fun isAnagram(s: String, t: String): Boolean {

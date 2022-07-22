@@ -1,9 +1,16 @@
 package medium
 
-/**
- * https://leetcode.com/problems/search-in-rotated-sorted-array/
- */
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 33,
+    title = "Search in Rotated Sorted Array",
+    link = "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+    difficulty = ProblemDifficulty.MEDIUM,
+)
 class SearchRotatedSortedArray {
 
     fun search(nums: IntArray, target: Int): Int {

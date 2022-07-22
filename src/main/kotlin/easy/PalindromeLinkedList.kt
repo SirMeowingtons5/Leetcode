@@ -1,12 +1,17 @@
 package easy
 
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 import utils.ListNode
 
-/**
- * 234. Palindrome Linked List
- * https://leetcode.com/problems/palindrome-linked-list/
- */
-
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 234,
+    title = "Palindrome Linked List",
+    link = "https://leetcode.com/problems/palindrome-linked-list/",
+    difficulty = ProblemDifficulty.EASY,
+)
 class PalindromeLinkedList {
 
     fun isPalindrome(head: ListNode?): Boolean {

@@ -1,10 +1,16 @@
 package medium
 
-/**
- * 36. Valid Sudoku
- * https://leetcode.com/problems/valid-sudoku/
- */
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 36,
+    title = "Valid Sudoku",
+    link = "https://leetcode.com/problems/valid-sudoku/",
+    difficulty = ProblemDifficulty.MEDIUM,
+)
 class ValidSudoku {
 
     fun isValidSudoku(board: Array<CharArray>): Boolean {

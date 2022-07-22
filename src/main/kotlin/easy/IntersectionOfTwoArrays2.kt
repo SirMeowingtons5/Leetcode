@@ -1,10 +1,16 @@
 package easy
 
-/**
- * 350. Intersection of Two Arrays II
- * https://leetcode.com/problems/intersection-of-two-arrays-ii/
- */
+import annotation.AlgorithmPlatform
+import annotation.AlgorithmProblem
+import annotation.ProblemDifficulty
 
+@AlgorithmProblem(
+    platform = AlgorithmPlatform.LEETCODE,
+    number = 350,
+    title = "Intersection of Two Arrays II",
+    link = "https://leetcode.com/problems/intersection-of-two-arrays-ii/",
+    difficulty = ProblemDifficulty.EASY,
+)
 class IntersectionOfTwoArrays2 {
 
     fun intersect(nums1: IntArray, nums2: IntArray): IntArray {
