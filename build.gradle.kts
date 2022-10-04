@@ -16,6 +16,7 @@ dependencies {
     testImplementation(kotlin("test-junit"))
     testImplementation(platform("org.junit:junit-bom:5.7.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
+    implementation(kotlin("script-runtime"))
 
 }
 
