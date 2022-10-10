@@ -5,8 +5,8 @@ import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.Arguments.arguments
 import org.junit.jupiter.params.provider.MethodSource
 import utils.ListNode
+import utils.listNodeOf
 import utils.toInt
-import utils.toListNode
 import java.util.stream.Stream
 import kotlin.test.assertEquals
 
@@ -16,9 +16,9 @@ internal class ReversedLinkedListTest {
 
         @JvmStatic
         fun sampleData(): Stream<Arguments> = Stream.of(
-            arguments(ReversedLinkedListTestData(head = intArrayOf(1,2,3,4,5).toListNode(), expected = intArrayOf(5,4,3,2,1).toListNode())),
-            arguments(ReversedLinkedListTestData(head = intArrayOf(1,2).toListNode(), expected = intArrayOf(2,1).toListNode())),
-            arguments(ReversedLinkedListTestData(head = intArrayOf(1).toListNode(), expected = intArrayOf(1).toListNode())),
+            arguments(ReversedLinkedListTestData(head = listNodeOf(1,2,3,4,5), expected = listNodeOf(5,4,3,2,1))),
+            arguments(ReversedLinkedListTestData(head = listNodeOf(1,2), expected = listNodeOf(2,1))),
+            arguments(ReversedLinkedListTestData(head = listNodeOf(1), expected = listNodeOf(1))),
             arguments(ReversedLinkedListTestData(head = null, expected = null))
         )
     }

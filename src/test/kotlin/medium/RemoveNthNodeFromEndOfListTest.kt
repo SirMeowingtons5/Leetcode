@@ -7,8 +7,8 @@ import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.Arguments.arguments
 import org.junit.jupiter.params.provider.MethodSource
 import utils.ListNode
+import utils.listNodeOf
 import utils.toIntArray
-import utils.toListNode
 import java.util.stream.Stream
 import kotlin.test.assertEquals
 
@@ -20,23 +20,23 @@ class RemoveNthNodeFromEndOfListTest {
         fun sampleData(): Stream<Arguments> = Stream.of(
             arguments(
                 RemoveNthNodeFromEndOfListTestData(
-                    head = intArrayOf(1, 2, 3, 4, 5).toListNode()!!,
+                    head = listNodeOf(1, 2, 3, 4, 5)!!,
                     n = 2,
-                    expected = intArrayOf(1, 2, 3, 5).toListNode()!!,
+                    expected = listNodeOf(1, 2, 3, 5)!!,
                 ),
             ),
             arguments(
                 RemoveNthNodeFromEndOfListTestData(
-                    head = intArrayOf(1, 2, 3, 4, 5).toListNode()!!,
+                    head = listNodeOf(1, 2, 3, 4, 5)!!,
                     n = 5,
-                    expected = intArrayOf(2, 3, 4, 5).toListNode()!!,
+                    expected = listNodeOf(2, 3, 4, 5)!!,
                 ),
             ),
             arguments(
                 RemoveNthNodeFromEndOfListTestData(
-                    head = intArrayOf(1, 2).toListNode()!!,
+                    head = listNodeOf(1, 2)!!,
                     n = 1,
-                    expected = intArrayOf(1).toListNode()!!,
+                    expected = listNodeOf(1)!!,
                 ),
             ),
         )
@@ -53,7 +53,7 @@ class RemoveNthNodeFromEndOfListTest {
 
     @Test
     fun `removing single node EXPECT null as result`() {
-        val actual = RemoveNthNodeFromEndOfList().removeNthFromEnd(head = intArrayOf(1).toListNode()!!, n = 1)
+        val actual = RemoveNthNodeFromEndOfList().removeNthFromEnd(head = listNodeOf(1)!!, n = 1)
         val expected: ListNode? = null
 
         assertEquals(expected, actual)

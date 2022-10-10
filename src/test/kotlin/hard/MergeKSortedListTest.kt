@@ -5,8 +5,8 @@ import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.Arguments.arguments
 import org.junit.jupiter.params.provider.MethodSource
 import utils.ListNode
+import utils.listNodeOf
 import utils.toReversedInt
-import utils.toListNode
 import java.util.stream.Stream
 import kotlin.test.assertEquals
 
@@ -19,11 +19,11 @@ internal class MergeKSortedListTest {
             Stream.of(
                 arguments(
                     arrayOf(
-                        intArrayOf(1, 4, 5).toListNode(),
-                        intArrayOf(1, 3, 4).toListNode(),
-                        intArrayOf(2, 6).toListNode()
+                        listNodeOf(1, 4, 5),
+                        listNodeOf(1, 3, 4),
+                        listNodeOf(2, 6)
                     ),
-                    intArrayOf(1, 1, 2, 3, 4, 4, 5, 6).toListNode()
+                    listNodeOf(1, 1, 2, 3, 4, 4, 5, 6)
                 ),
                 arguments(
                     emptyArray<ListNode?>(),

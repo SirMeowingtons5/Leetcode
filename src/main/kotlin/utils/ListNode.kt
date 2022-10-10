@@ -18,22 +18,6 @@ class ListNode(var `val`: Int) {
 
 }
 
-@Deprecated("Use listNodeOf() instead")
-fun IntArray.toListNode(): ListNode? {
-    if (this.isEmpty()) return null
-
-    val rootNode = ListNode(this[0])
-    var currentNode = rootNode
-
-    for (i in 1 until this.size) {
-        val newNode = ListNode(this[i])
-        currentNode.next = newNode
-        currentNode = newNode
-    }
-
-    return rootNode
-}
-
 fun ListNode.toInt(): Int {
     val sb = StringBuilder()
 
