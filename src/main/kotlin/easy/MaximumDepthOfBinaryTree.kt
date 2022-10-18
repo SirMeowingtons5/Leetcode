@@ -3,9 +3,11 @@ package easy
 import annotation.AlgorithmPlatform
 import annotation.AlgorithmProblem
 import annotation.ProblemDifficulty
+import org.jetbrains.annotations.TestOnly
 import utils.TreeNode
 import java.util.LinkedList
 import java.util.Queue
+import kotlin.math.max
 
 @AlgorithmProblem(
     platform = AlgorithmPlatform.LEETCODE,
@@ -16,7 +18,10 @@ import java.util.Queue
 )
 class MaximumDepthOfBinaryTree {
 
-    fun maxDepth(root: TreeNode?): Int {
+    fun maxDepth(root: TreeNode?): Int =
+        maxDepthIterative(root)
+
+    private fun maxDepthIterative(root: TreeNode?): Int {
         if (root == null) return 0
         val queue: Queue<TreeNode> = LinkedList()
         queue.add(root)
@@ -35,5 +40,38 @@ class MaximumDepthOfBinaryTree {
         }
 
         return counter
+    }
+
+    var topBottomRes = 0
+    private fun maxDepthRecursiveTopBottom(root: TreeNode?, depth: Int) {
+        if (root == null) return
+
+        if (root.left == null && root.right == null) {
+            topBottomRes = maxOf(topBottomRes, depth)
+        }
+
+        maxDepthRecursiveTopBottom(root.left, depth + 1)
+        maxDepthRecursiveTopBottom(root.right, depth + 1)
+    }
+
+    private fun maxDepthRecursiveBottomTop(root: TreeNode?): Int {
+        if (root == null) return 0
+
+        return maxOf(maxDepthRecursiveBottomTop(root.left), maxDepthRecursiveBottomTop(root.right)) + 1
+    }
+
+    @TestOnly
+    fun testIterative(root: TreeNode?): Int =
+        maxDepthIterative(root)
+
+    @TestOnly
+    fun testRecursiveBottomTop(root: TreeNode?): Int =
+        maxDepthRecursiveBottomTop(root)
+
+    @TestOnly
+    fun testRecursiveTopBottom(root: TreeNode?): Int {
+        topBottomRes = 0
+        maxDepthRecursiveTopBottom(root, 1)
+        return topBottomRes
     }
 }

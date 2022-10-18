@@ -30,12 +30,20 @@ class MaximumDepthOfBinaryTreeTest {
         )
     }
 
+    private val subject = MaximumDepthOfBinaryTree()
+
     @ParameterizedTest
     @MethodSource("sampleData")
     fun `sample data test`(data: MaximumDepthOfBinaryTreeTestData) {
-        val actual = MaximumDepthOfBinaryTree().maxDepth(data.root)
+        val actualCurrentlySelected = subject.maxDepth(data.root)
+        val actualIterative = subject.testIterative(data.root)
+        val actualRecursiveBottomTop = subject.testRecursiveBottomTop(data.root)
+        val actualRecursiveTopBottom = subject.testRecursiveTopBottom(data.root)
 
-        assertEquals(data.expected, actual)
+        assertEquals(data.expected, actualCurrentlySelected)
+        assertEquals(data.expected, actualIterative)
+        assertEquals(data.expected, actualRecursiveBottomTop)
+        assertEquals(data.expected, actualRecursiveTopBottom)
     }
 
     data class MaximumDepthOfBinaryTreeTestData(val root: TreeNode, val expected: Int)
